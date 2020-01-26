@@ -24,43 +24,41 @@ namespace Day_1___After_Hours
                 //get length
                 Console.WriteLine("Length: ");
                 string temp = Console.ReadLine();
-                double len;
-                bool isDouble = double.TryParse(temp, out len);
-                while (isDouble == false)
+                double length;
+                while (!double.TryParse(temp, out length))
                 {
                     Console.WriteLine("Invalid entry. Please enter a number.");
                     temp = Console.ReadLine();
-                    isDouble = double.TryParse(temp, out len);
+                    double.TryParse(temp, out length);
                 }
 
                 //get width
                 Console.WriteLine("Width: ");
                 temp = Console.ReadLine();
-                double wid;
-                isDouble = double.TryParse(temp, out wid);
-                while (isDouble == false)
+                double width;
+                while (!double.TryParse(temp, out width))
                 {
                     Console.WriteLine("Invalid entry. Please enter a number.");
                     temp = Console.ReadLine();
-                    isDouble = double.TryParse(temp, out wid);
+                    double.TryParse(temp, out width);
                 }
 
                 //get height
                 Console.WriteLine("Height: ");
                 temp = Console.ReadLine();
                 double height;
-                isDouble = double.TryParse(temp, out height);
-                while (isDouble == false)
+                //isDouble = double.TryParse(temp, out height);
+                while (!double.TryParse(temp, out height))
                 {
                     Console.WriteLine("Invalid entry. Please enter a number.");
                     temp = Console.ReadLine();
-                    isDouble = double.TryParse(temp, out height);
+                    double.TryParse(temp, out height);
                 }
 
                 //math
-                double area = len * wid;
-                double perimiter = 2 * (len + wid);
-                double volume = len * wid * height;
+                double area = length * width;
+                double perimiter = 2 * (length + width);
+                double volume = length * width * height;
 
                 //output
                 Console.WriteLine($"Area: {area}");
